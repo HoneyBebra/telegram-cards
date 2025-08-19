@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  service:
+    image: service
+    restart: always
+    env_file:
+      - .env
+    build: .
+    deploy:
+      replicas: 2
