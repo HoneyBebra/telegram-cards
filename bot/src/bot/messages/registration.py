@@ -6,8 +6,6 @@ from ..dispatcher.dispatcher import get_dispatcher
 
 dp = get_dispatcher()
 
-# TODO: Добавить папки по карточкам
-
 
 @dp.message(CommandStart())
 async def command_start_handler(message: types.Message) -> None:
