@@ -5,7 +5,9 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from core.config import settings
 
-from bot.dispatcher.dispatcher import get_dispatcher
+from cards.tg_dispatcher.dispatcher import get_dispatcher
+
+# TODO: Сделать схему БД с учётом того, что ТГ можно будет подключать через сайт или не подключать
 
 
 async def main() -> None:

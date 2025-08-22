@@ -2,7 +2,7 @@ from aiogram import F
 from aiogram.types import Message
 from core.config import commands
 
-from ..dispatcher.dispatcher import get_dispatcher
+from ..tg_dispatcher.dispatcher import get_dispatcher
 
 dp = get_dispatcher()
 

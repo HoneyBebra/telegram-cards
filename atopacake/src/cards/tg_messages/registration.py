@@ -2,7 +2,7 @@ from aiogram import types
 from aiogram.filters import CommandStart
 from core.config import commands
 
-from ..dispatcher.dispatcher import get_dispatcher
+from ..tg_dispatcher.dispatcher import get_dispatcher
 
 dp = get_dispatcher()
 
