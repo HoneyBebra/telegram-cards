@@ -1,4 +1,4 @@
-FROM python:3.13-slim
+FROM python:3.12-slim
 
 ENV APP_DIR /opt/app
 ENV APP_USER user

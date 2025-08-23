@@ -16,7 +16,7 @@ class BaseDirectoriesRepository(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    async def update(self, user_id: UUID, name: str) -> CardSchema:
+    async def update(self, user_id: UUID, name: str) -> DirectorySchema:
         raise NotImplementedError
 
     @abstractmethod

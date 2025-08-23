@@ -8,6 +8,7 @@ exclude = [
     "venv/",
     "env/",
     ".venv/",
+    "migration",
 ]
 
 [lint]
