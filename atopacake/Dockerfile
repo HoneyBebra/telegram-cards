@@ -23,4 +23,4 @@ RUN  groupadd -r ${APP_GROUP} && \
 
 USER ${APP_USER}
 
-ENTRYPOINT ["python3", "src/main.py"]
+ENTRYPOINT ["python3", "src/run_bot.py"]
