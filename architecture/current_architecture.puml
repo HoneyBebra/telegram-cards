@@ -4,7 +4,7 @@ actor TgUser
 component NginxGateway
 component TgBot
 
-package Atopacake {
+package AtopacakeApi {
   component NginxAtopacake
   database PostgresAtopacake
 
