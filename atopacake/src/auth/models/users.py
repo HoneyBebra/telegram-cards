@@ -2,9 +2,10 @@ from uuid import UUID, uuid4
 
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from .base import BaseModel
-from .directories import Directories
-from .tg_users import TgUsers
+from ...auth.models.tg_users import TgUsers
+from ...cards.models.directories import Directories
+from ...global_models.base import BaseModel
+from ...texts.models.texts import Texts
 
 
 class Users(BaseModel):
@@ -18,7 +19,7 @@ class Users(BaseModel):
     )
     login: Mapped[str] = mapped_column(nullable=True)
     password: Mapped[str] = mapped_column(nullable=True)
-    phone_number: Mapped[int] = mapped_column(nullable=True)
+    phone_number: Mapped[str] = mapped_column(nullable=True)
 
     tg_user: Mapped["TgUsers"] = relationship(
         "TgUsers",
@@ -27,6 +28,10 @@ class Users(BaseModel):
     )
     directories: Mapped[list["Directories"]] = relationship(
         "Directories",
+        back_populates="user",
+    )
+    texts: Mapped[list["Texts"]] = relationship(
+        "Texts",
         back_populates="user",
     )
 

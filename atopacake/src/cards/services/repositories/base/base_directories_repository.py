@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from uuid import UUID
 
-from ...schemas.v1.directories import DirectorySchema
+from ....schemas.v1.directories import DirectorySchema
 
 
 class BaseDirectoriesRepository(ABC):

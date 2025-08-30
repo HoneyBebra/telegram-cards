@@ -16,22 +16,12 @@ ENV_FILE = BASE_DIR / ".env"
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=ENV_FILE)
 
-    postgres_user: str
-    postgres_password: str
-    postgres_db: str
-    postgres_host: str
-    postgres_port: int
+    bot_token: str
 
-    @property
-    def postgres_dsn(self) -> str:
-        return (
-            f"postgresql+asyncpg://"
-            f"{self.postgres_user}:"
-            f"{self.postgres_password}@"
-            f"{self.postgres_host}:"
-            f"{self.postgres_port}/"
-            f"{self.postgres_db}"
-        )
+
+class Commands(BaseSettings):
+    add_card_command: str = "Добавить карточку"
+    learn_cards_command: str = "Учить карточки"
 
 
 @lru_cache
@@ -39,6 +29,12 @@ def get_settings() -> Settings:
     return Settings()  # type: ignore[call-arg]
 
 
+def get_commands() -> Commands:
+    return Commands()
+
+
 settings = get_settings()
+commands = get_commands()
+
 
 logging_config.dictConfig(LOGGING)

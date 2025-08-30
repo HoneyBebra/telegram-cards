@@ -4,12 +4,12 @@ from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from ...auth.models.users import Users
+from ...cards.models.cards import Cards
 from ...global_models.base import BaseModel
-from .cards import Cards
 
 
-class Directories(BaseModel):
-    __tablename__ = "directories"
+class Texts(BaseModel):
+    __tablename__ = "texts"
 
     id: Mapped[UUID] = mapped_column(
         primary_key=True,
@@ -17,17 +17,17 @@ class Directories(BaseModel):
         unique=True,
         nullable=False,
     )
+    text: Mapped[str] = mapped_column(nullable=False)
     user_id: Mapped[UUID] = mapped_column(
         ForeignKey("users.id"),
         nullable=False,
     )
-    name: Mapped[str] = mapped_column(nullable=False)
 
     user: Mapped["Users"] = relationship(
         "Users",
-        back_populates="directories",
+        back_populates="texts",
     )
     cards: Mapped[list["Cards"]] = relationship(
         "Cards",
-        back_populates="directory",
+        back_populates="text",
     )

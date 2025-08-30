@@ -1,7 +1,9 @@
+# Maybe this will be moved to the auth service
+
 from abc import ABC, abstractmethod
 from uuid import UUID
 
-from ...schemas.v1.tg_users import TgUserSchema
+from ....schemas.v1.tg_users import TgUserSchema
 
 # TODO: hash sensitive data!!
 
@@ -10,7 +12,12 @@ class BaseTgUsersRepository(ABC):
     """Abstract class describing working with database."""
 
     @abstractmethod
-    async def create(self, tg_id: int, username: str) -> TgUserSchema:
+    async def create(
+            self,
+            tg_id: int,
+            username: str,
+            user_id: UUID | None = None,
+    ) -> TgUserSchema:
         raise NotImplementedError
 
     @abstractmethod

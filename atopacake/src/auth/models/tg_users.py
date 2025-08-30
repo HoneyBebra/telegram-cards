@@ -3,8 +3,8 @@ from uuid import UUID
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from .base import BaseModel
-from .users import Users
+from ...auth.models.users import Users
+from ...global_models.base import BaseModel
 
 
 class TgUsers(BaseModel):
