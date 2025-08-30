@@ -1,4 +1,4 @@
-# Bot service
+# Api service
 
 ## Deploy
 
