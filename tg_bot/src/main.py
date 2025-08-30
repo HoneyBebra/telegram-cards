@@ -3,8 +3,9 @@ import asyncio
 from aiogram import Bot
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
-from cards.tg_dispatcher.dispatcher import get_dispatcher
-from core.config import settings
+
+from src.cards.tg_dispatcher.dispatcher import get_dispatcher
+from src.core.config import settings
 
 
 async def main() -> None:

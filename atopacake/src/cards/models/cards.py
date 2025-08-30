@@ -3,9 +3,9 @@ from uuid import UUID, uuid4
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from ...global_models.base import BaseModel
-from ...texts.models.texts import Texts
-from .directories import Directories
+from src.cards.models.directories import Directories
+from src.global_models.base import BaseModel
+from src.texts.models.texts import Texts
 
 
 class Cards(BaseModel):

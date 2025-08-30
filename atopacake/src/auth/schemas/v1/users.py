@@ -1,6 +1,6 @@
 from uuid import UUID
 
-from .base import BaseSchema
+from src.auth.schemas.v1.base import BaseSchema
 
 
 class UserSchema(BaseSchema):

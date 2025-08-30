@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from uuid import UUID
 
-from ....schemas.v1.cards import CardSchema
+from src.cards.schemas.v1.cards import CardSchema
 
 
 class BaseCardsRepository(ABC):

@@ -1,7 +1,7 @@
 from aiogram import F
 from aiogram.types import Message
 
-from ..tg_dispatcher.dispatcher import get_dispatcher
+from src.cards.tg_dispatcher.dispatcher import get_dispatcher
 from src.core.config import commands
 
 dp = get_dispatcher()

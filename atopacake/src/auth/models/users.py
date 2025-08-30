@@ -2,10 +2,10 @@ from uuid import UUID, uuid4
 
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from ...auth.models.tg_users import TgUsers
-from ...cards.models.directories import Directories
-from ...global_models.base import BaseModel
-from ...texts.models.texts import Texts
+from src.auth.models.tg_users import TgUsers
+from src.cards.models.directories import Directories
+from src.global_models.base import BaseModel
+from src.texts.models.texts import Texts
 
 
 class Users(BaseModel):

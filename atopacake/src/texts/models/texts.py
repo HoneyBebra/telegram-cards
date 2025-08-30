@@ -3,9 +3,9 @@ from uuid import UUID, uuid4
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from ...auth.models.users import Users
-from ...cards.models.cards import Cards
-from ...global_models.base import BaseModel
+from src.auth.models.users import Users
+from src.cards.models.cards import Cards
+from src.global_models.base import BaseModel
 
 
 class Texts(BaseModel):

@@ -3,7 +3,7 @@
 from abc import ABC, abstractmethod
 from uuid import UUID
 
-from ....schemas.v1.users import UserSchema
+from src.auth.schemas.v1.users import UserSchema
 
 # TODO: hash sensitive data!!
 
