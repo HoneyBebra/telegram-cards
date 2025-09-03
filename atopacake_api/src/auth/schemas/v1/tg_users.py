@@ -1,6 +1,6 @@
 from uuid import UUID
 
-from src.auth.schemas.v1.base import BaseSchema
+from src.common.schemas import BaseSchema
 
 
 class TgUserSchema(BaseSchema):

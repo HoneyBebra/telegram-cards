@@ -4,7 +4,7 @@ from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from src.auth.models.users import Users
-from src.global_models.base import BaseModel
+from src.common.models import BaseModel
 
 
 class TgUsers(BaseModel):

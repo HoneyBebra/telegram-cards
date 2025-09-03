@@ -5,7 +5,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from src.auth.models.users import Users
 from src.cards.models.cards import Cards
-from src.global_models.base import BaseModel
+from src.common.models import BaseModel
 
 
 class Directories(BaseModel):

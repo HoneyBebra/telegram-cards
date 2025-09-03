@@ -4,7 +4,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from src.auth.models.tg_users import TgUsers
 from src.cards.models.directories import Directories
-from src.global_models.base import BaseModel
+from src.common.models import BaseModel
 from src.texts.models.texts import Texts
 
 
